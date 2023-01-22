@@ -48,7 +48,8 @@ function refreshView(arr) {
 }
 
 function handleSelect(checkbox, id) {
-    elems.find(elem => elem.id == id).state = checkbox.checked;
+    tempElems.find(elem => elem.id == id).state = checkbox.checked;
+    refreshView(tempElems);
 }
 
 function handleSearch() {
